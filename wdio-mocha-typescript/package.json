@@ -1,0 +1,48 @@
+{
+  "name": "wdio-jasmine-typescript",
+  "version": "1.0.0",
+  "description": "Simple project with wdio v^5 and typescript ",
+  "main": "index.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/tslint --fix src/**/*.ts --project tsconfig.json",
+    "build": "npm run lint && rimraf disc && ./node_modules/.bin/tsc --outDir disc",
+    "test": "./node_modules/.bin/wdio wdio.conf.js",
+    "local": "npm run build && ./node_modules/.bin/wdio config/local.conf.js",
+    "wd-start": "./node_modules/.bin/selenium-standalone install && ./node_modules/.bin/selenium-standalone start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/numon/Example-of-JS-automation.git"
+  },
+  "keywords": [
+    "webdriverIO",
+    "typescript"
+  ],
+  "author": "numon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/numon/Example-of-JS-automation/issues"
+  },
+  "homepage": "https://github.com/numon/Example-of-JS-automation#readme",
+  "dependencies": {
+    "webdriverio": "^5.4.7"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.12.19",
+    "@types/webdriverio": "^5.0.0",
+    "@wdio/cli": "^5.4.7",
+    "@wdio/local-runner": "^5.4.7",
+    "@wdio/mocha-framework": "^5.4.6",
+    "@wdio/selenium-standalone-service": "^5.2.2",
+    "chai": "^4.2.0",
+    "pre-commit": "^1.2.2",
+    "rimraf": "^2.6.3",
+    "ts-node": "^8.0.2",
+    "tsconfig-paths": "^3.7.0",
+    "tslint": "^5.12.1",
+    "tslint-config-airbnb": "^5.11.1",
+    "typescript": "^3.2.4"
+  }
+}
