@@ -1,22 +1,25 @@
 {
-  "name": "wdio-jasmine-typescript",
+  "name": "wdio5-mocha-typescript",
   "version": "1.0.0",
   "description": "Simple project with wdio v^5 and typescript ",
   "main": "index.js",
   "scripts": {
     "lint": "./node_modules/.bin/tslint --fix src/**/*.ts --project tsconfig.json",
-    "build": "npm run lint && rimraf disc && ./node_modules/.bin/tsc --outDir disc",
     "test": "./node_modules/.bin/wdio wdio.conf.js",
-    "local": "npm run build && ./node_modules/.bin/wdio config/local.conf.js",
+    "local": "./node_modules/.bin/wdio config/local.conf.js",
     "wd-start": "./node_modules/.bin/selenium-standalone install && ./node_modules/.bin/selenium-standalone start"
   },
+  "pre-commit": [
+    "lint"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/numon/Example-of-JS-automation.git"
   },
   "keywords": [
-    "webdriverIO",
-    "typescript"
+    "webdriverIO 5",
+    "typescript",
+    "Mocha"
   ],
   "author": "numon",
   "license": "ISC",
@@ -37,8 +40,8 @@
     "@wdio/mocha-framework": "^5.4.6",
     "@wdio/selenium-standalone-service": "^5.2.2",
     "chai": "^4.2.0",
+    "lodash": "^4.17.11",
     "pre-commit": "^1.2.2",
-    "rimraf": "^2.6.3",
     "ts-node": "^8.0.2",
     "tsconfig-paths": "^3.7.0",
     "tslint": "^5.12.1",
