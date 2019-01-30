@@ -62,3 +62,7 @@ typings/
 
 #IDE
 .idea
+.DS_Store
+
+#Transpiling
+dist/

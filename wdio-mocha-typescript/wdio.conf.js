@@ -128,7 +128,7 @@ exports.config = {
      * @param {Object} config wdio configuration object
      * @param {Array.<Object>} capabilities list of capabilities details
      */
-    // onPrepare: function (config, capabilities) {
+    // onPrepare: function (baseConfig, capabilities) {
     // },
     /**
      * Gets executed just before initialising the webdriver session and test framework. It allows you
@@ -137,7 +137,7 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {Array.<String>} specs List of spec file paths that are to be run
      */
-    // beforeSession: function (config, capabilities, specs) {
+    // beforeSession: function (baseConfig, capabilities, specs) {
     // },
     /**
      * Gets executed before test execution begins. At this point you can access to all global
@@ -216,7 +216,7 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {Array.<String>} specs List of spec file paths that ran
      */
-    // afterSession: function (config, capabilities, specs) {
+    // afterSession: function (baseConfig, capabilities, specs) {
     // },
     /**
      * Gets executed after all workers got shut down and the process is about to exit.
@@ -225,7 +225,7 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {<Object>} results object containing test results
      */
-    // onComplete: function(exitCode, config, capabilities, results) {
+    // onComplete: function(exitCode, baseConfig, capabilities, results) {
     // },
     /**
     * Gets executed when a refresh happens.
