@@ -7,5 +7,7 @@ export let config: Config = {
   },
   specs: [ '../specs/**/*.js' ],
   seleniumAddress: 'http://localhost:4444/wd/hub',
-  noGlobals: true
+  baseUrl: 'http://www.angularjs.org',
+  noGlobals: true,
+  SELENIUM_PROMISE_MANAGER: false
 };
