@@ -14,11 +14,11 @@ export default class BasePage {
     return browser.get(path ? browser.baseUrl + path : browser.baseUrl);
   }
 
-  waitForElement(elm : ElementFinder, timeout: number = this.timeout): promise.Promise<Function> {
+  waitForElement(elm : ElementFinder, timeout: number = this.timeout) {
     return browser.wait(EC.visibilityOf(elm), timeout);
   }
 
-  waitForRemoved(elm : ElementFinder, timeout: number = this.timeout): promise.Promise<Function> {
+  waitForRemoved(elm : ElementFinder, timeout: number = this.timeout) {
     return browser.wait(EC.stalenessOf(elm), timeout);
   }
 
