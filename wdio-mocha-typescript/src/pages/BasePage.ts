@@ -5,7 +5,7 @@ export default class BasePage {
     this.ui = {};
   }
 
-  async openPage(path?: string|undefined): Promise<void> {
+  public async openPage(path?: string|undefined): Promise<void> {
     await browser.url(path ? browser.options.baseUrl + path : browser.options.baseUrl);
   }
 
@@ -13,7 +13,7 @@ export default class BasePage {
    * get page title
    * @return {string} text
    */
-  getPageTitle(): string {
+  public getPageTitle(): string {
     return browser.getTitle();
   }
 
@@ -21,7 +21,7 @@ export default class BasePage {
    * wait for element in page
    * @param elm {string | WebdriverIO.Client<WebdriverIO.RawResult<WebdriverIO.Element>>} element for waiting
    */
-  async waitForElement(elm): Promise<void> {
+  public async waitForElement(elm): Promise<void> {
     if (typeof elm === 'string') {
       await $(elm).waitForExist();
       await $(elm).waitForDisplayed();

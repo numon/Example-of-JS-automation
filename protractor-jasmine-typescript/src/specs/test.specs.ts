@@ -1,4 +1,4 @@
-import { browser, element, by } from 'protractor';
+import { browser, by, element } from 'protractor';
 import LoginPage from '../components/pageObjects/LoginPage';
 
 describe('angularjs homepage', () => {

@@ -1,24 +1,20 @@
-import { browser, ExpectedConditions as EC, ElementFinder, WebElement, promise as wdpromise } from 'protractor';
-import { promise, WebElementPromise } from 'selenium-webdriver';
+import { browser, ElementFinder, ExpectedConditions as EC } from 'protractor';
+import { promise } from 'selenium-webdriver';
 
 export default class BasePage {
-  protected ui: {};
-  private readonly timeout: number;
 
-  constructor() {
-    this.timeout = 15000;
-    this.ui = {};
+  constructor(protected ui:{} = {}, private readonly timeout: number = 15000) {
   }
 
-  openPage(path?: string|undefined): promise.Promise<any> {
+  public openPage(path?: string|undefined): promise.Promise<any> {
     return browser.get(path ? browser.baseUrl + path : browser.baseUrl);
   }
 
-  waitForElement(elm : ElementFinder, timeout: number = this.timeout) {
+  public waitForElement(elm : ElementFinder, timeout: number = this.timeout) {
     return browser.wait(EC.visibilityOf(elm), timeout);
   }
 
-  waitForRemoved(elm : ElementFinder, timeout: number = this.timeout) {
+  public waitForRemoved(elm : ElementFinder, timeout: number = this.timeout) {
     return browser.wait(EC.stalenessOf(elm), timeout);
   }
 
