@@ -2,9 +2,9 @@ import { browser, ElementFinder, ExpectedConditions as EC } from 'protractor';
 import { promise } from 'selenium-webdriver';
 
 export default class BasePage {
+  protected to: <T>(promiseIn: promise.Promise<any>) => promise.Promise<any[] | T[]>;
 
-  constructor(protected ui:{} = {}, private readonly timeout: number = 15000) {
-  }
+  constructor(protected ui:{} = {}, private readonly timeout: number = 15000) {}
 
   public openPage(path?: string|undefined): promise.Promise<any> {
     return browser.get(path ? browser.baseUrl + path : browser.baseUrl);
@@ -17,5 +17,7 @@ export default class BasePage {
   public waitForRemoved(elm : ElementFinder, timeout: number = this.timeout) {
     return browser.wait(EC.stalenessOf(elm), timeout);
   }
+
+
 
 }

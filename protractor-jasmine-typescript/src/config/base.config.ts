@@ -1,13 +1,13 @@
 import { Config } from 'protractor';
 
 export let config: Config = {
-  framework: 'jasmine',
+  SELENIUM_PROMISE_MANAGER: false,
+  baseUrl: 'http://www.angularjs.org',
   capabilities: {
     browserName: 'chrome'
   },
-  specs: [ '../specs/**/*.js' ],
-  seleniumAddress: 'http://localhost:4444/wd/hub',
-  baseUrl: 'http://www.angularjs.org',
+  framework: 'jasmine',
   noGlobals: true,
-  SELENIUM_PROMISE_MANAGER: false
+  seleniumAddress: 'http://localhost:4444/wd/hub',
+  specs: [ '../specs/**/*.js' ],
 };

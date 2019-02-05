@@ -1,12 +1,16 @@
 import { browser, by, element } from 'protractor';
 import LoginPage from '../components/pageObjects/LoginPage';
+import to from '../utils/ErrorPromiseHandler';
 
 describe('angularjs homepage', () => {
 
   const loginPage = new LoginPage();
+  let err;
+  let data;
 
   beforeAll(async () => {
-    await loginPage.openPage();
+    [err, data] = await to(loginPage.openPage());
+    if(err) { throw new Error('Can not open Index page'); }
   });
 
   it('should greet the named user', async () => {
