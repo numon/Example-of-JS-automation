@@ -28,7 +28,6 @@
     "typescript": "^3.2.4"
   },
   "devDependencies": {
-    "@types/jasminewd2": "^2.0.0",
     "@types/node": "^10.12.19",
     "ts-node": "^3.0.2",
     "tslint": "^5.12.1",
