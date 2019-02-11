@@ -1,4 +1,5 @@
-import { $, browser, ElementFinder, promise } from 'protractor';
+import { $, browser, ElementFinder } from 'protractor';
+import { promise } from 'selenium-webdriver';
 
 export default class BrowserHelper {
   public scrollIntoView(locator: string|ElementFinder) {
@@ -14,4 +15,10 @@ export default class BrowserHelper {
     await browser.executeScript(`window.localStorage.setItem('${key}', '${value}');`);
     return browser.refresh();
   }
+
+  public async openLastTab(): Promise<void> {
+    const handles = await browser.getAllWindowHandles();
+    await browser.switchTo().window(handles[handles.length - 1]);
+  }
+
 }
