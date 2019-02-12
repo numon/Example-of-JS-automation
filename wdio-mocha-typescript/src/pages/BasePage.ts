@@ -13,13 +13,13 @@ export default class BasePage {
    * get page title
    * @return {string} text
    */
-  public getPageTitle(): string {
+  public async getPageTitle(): Promise<string> {
     return browser.getTitle();
   }
 
   /**
    * wait for element in page
-   * @param elm {string | WebdriverIO.Client<WebdriverIO.RawResult<WebdriverIO.Element>>} element for waiting
+   * @param elm Promise<void>
    */
   public async waitForElement(elm): Promise<void> {
     if (typeof elm === 'string') {
@@ -29,6 +29,26 @@ export default class BasePage {
       await elm.waitForExist();
       await elm.waitForDisplayed();
     }
+  }
+
+  /**
+   * wait for animation
+   * @param {number} ms
+   * @return Promise<undefined> browser pause
+   */
+  public async waitForAnimation(ms): Promise<undefined> {
+    return browser.pause(ms || 1500);
+  }
+
+  /**
+   * check if element has class
+   * @param {string} elm
+   * @param {string} className
+   * @return Promise<boolean>
+   */
+  public async hasClass(elm, className): Promise<boolean> {
+    const classNameArr = await elm.getAttribute('class').split(' ');
+    return classNameArr.some(cssClass => cssClass === className);
   }
 
 }

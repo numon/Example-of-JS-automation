@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/numon/Example-of-JS-automation#readme",
   "dependencies": {
+    "chai-http": "^4.2.1",
     "webdriverio": "^5.4.7"
   },
   "devDependencies": {
