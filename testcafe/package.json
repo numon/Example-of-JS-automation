@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/testcafe chrome specs.js"
+    "test": "./node_modules/.bin/testcafe chrome specs.js",
+    "testAll": "./node_modules/.bin/testcafe all specs.js"
   },
   "keywords": [],
   "author": "",
