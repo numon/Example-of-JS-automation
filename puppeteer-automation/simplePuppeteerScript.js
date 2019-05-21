@@ -4,7 +4,8 @@ const puppeteer = require('puppeteer');
   const browser = await puppeteer.launch({
     headless: false,
     // slowMo: 250 // slow down by 250ms
-  });  const page = await browser.newPage();
+  });
+  const page = await browser.newPage();
   await page.goto('https://example.com');
 
   // Get the "viewport" of the page, as reported by the page.
