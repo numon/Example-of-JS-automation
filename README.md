@@ -17,3 +17,5 @@ Example of JS automation
 - `webdriverIO + Mocha + TypeScript` you can fine **[here](https://github.com/numon/Example-of-JS-automation/tree/master/wdio-mocha-typescript)**
 - `puppeteer + jasmine + mocha`  you can fine **[here](https://github.com/numon/Example-of-JS-automation/tree/master/puppeteer-automation)**
 - `testcafe`  you can fine **[here](https://github.com/numon/Example-of-JS-automation/tree/master/testcafe)**
+- `puppeteer-automation`  you can fine **[here](https://github.com/numon/Example-of-JS-automation/tree/master/puppeteer-automation)**
+- `puppeteer-performance`  you can fine **[here](https://github.com/numon/Example-of-JS-automation/tree/master/puppeteer-performance)**
