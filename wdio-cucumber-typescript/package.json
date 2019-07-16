@@ -1,0 +1,24 @@
+{
+  "name": "wdio-cucumber-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@wdio/selenium-standalone-service": "^5.11.2",
+    "webdriverio": "^5.11.5"
+  },
+  "devDependencies": {
+    "@wdio/cli": "^5.11.5",
+    "@wdio/cucumber-framework": "^5.11.3",
+    "@wdio/dot-reporter": "^5.11.0",
+    "@wdio/local-runner": "^5.11.5",
+    "@wdio/spec-reporter": "^5.11.0",
+    "chromedriver": "^75.1.0"
+  }
+}
