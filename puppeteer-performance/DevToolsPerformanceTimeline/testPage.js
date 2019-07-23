@@ -7,7 +7,7 @@ async function testPage(page) {
   const client = await page.target().createCDPSession();
   await client.send('Performance.enable');
 
-  await page.goto('http://localhost:8080');
+  await page.goto('https://developers.google.com');
 
   let firstMeaningfulPaint = 0;
   let performanceMetrics;

@@ -1,0 +1,15 @@
+{
+  "name": "smashtest-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/smashtest firstTest.smash"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "smashtest": "^1.0.20-beta"
+  }
+}
