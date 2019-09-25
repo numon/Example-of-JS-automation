@@ -41,11 +41,7 @@
     "@wdio/mocha-framework": "^5.4.6",
     "@wdio/selenium-standalone-service": "^5.2.2",
     "chai": "^4.2.0",
-<<<<<<< HEAD
     "lodash": "^4.17.15",
-=======
-    "lodash": "^4.17.13",
->>>>>>> 8c3abff22525dbd1be4542c6b2a0588e8ba817e6
     "pre-commit": "^1.2.2",
     "ts-node": "^8.0.2",
     "tsconfig-paths": "^3.7.0",
