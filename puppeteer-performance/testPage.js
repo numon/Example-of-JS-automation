@@ -8,7 +8,7 @@ async function testPage(page) {
   const client = await page.target().createCDPSession();
   await client.send('Performance.enable');
 
-  await page.goto('http://localhost:8080');
+  await page.goto('https://www.w3.org/TR/navigation-timing/');
 
   const performanceMetrics = await client.send('Performance.getMetrics');
 
