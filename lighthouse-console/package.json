@@ -1,0 +1,21 @@
+{
+  "name": "lighthouse-console",
+  "version": "1.0.0",
+  "description": "",
+  "main": "withAssert.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha withAssert.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lighthouse-logger": "latest"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "cli-table": "^0.3.1",
+    "lighthouse": "^5.6.0",
+    "mocha": "^6.2.2"
+  }
+}
