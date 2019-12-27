@@ -20,3 +20,4 @@ Example of JS automation
 - `testcafe`  you can fine **[here](https://github.com/numon/Example-of-JS-automation/tree/master/testcafe)**
 - `puppeteer-automation`  you can fine **[here](https://github.com/numon/Example-of-JS-automation/tree/master/puppeteer-automation)**
 - `puppeteer-performance`  you can fine **[here](https://github.com/numon/Example-of-JS-automation/tree/master/puppeteer-performance)**
+- `smashtest`  you can fine **[here](https://github.com/numon/Example-of-JS-automation/tree/master/smashtest)**
