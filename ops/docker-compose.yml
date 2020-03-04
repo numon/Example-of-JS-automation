@@ -28,4 +28,4 @@ services:
     links:
       - selenoid
     volumes:
-      - "$PWD:/opt/protractor"
+      - "$PWD"
